@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donezo — To-Do List</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="brand"><span class="brand-icon">✓</span> donezo</div>
+      <p class="eyebrow">YOUR DAY, UNDER CONTROL</p>
+      <h1>Make room for<br><span>what matters.</span></h1>
+      <p class="subtitle">A little progress every day adds up to big results.</p>
+      <div class="date-pill" id="today"></div>
+    </section>
+
+    <section class="board">
+      <form id="task-form" class="add-form">
+        <input id="task-input" type="text" maxlength="240" placeholder="What needs to get done?" autocomplete="off" required>
+        <button type="submit">Add task <span>＋</span></button>
+      </form>
+      <div class="stats">
+        <div><span class="stat-number" id="total-count">0</span><span class="stat-label">Total tasks</span></div>
+        <div><span class="stat-number" id="left-count">0</span><span class="stat-label">To do</span></div>
+        <div><span class="stat-number" id="done-count">0</span><span class="stat-label">Completed</span></div>
+      </div>
+      <div class="list-heading"><h2>Your tasks</h2><span id="progress-label">A fresh start ✨</span></div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <ul id="task-list" class="task-list"></ul>
+      <div id="empty-state" class="empty-state"><div class="empty-icon">✦</div><h3>Nothing on your list yet</h3><p>Add a task above and make today count.</p></div>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+    <footer>Built with <strong>C + Linked List</strong> · running locally on your computer</footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
